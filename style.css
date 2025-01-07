@@ -1,0 +1,507 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Dynamic text highlight styles */
+.highlight {
+    font-weight: bold;
+    color: #4CAF50;
+    transition: color 0.5s ease-in-out;
+}
+
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px 10%;
+}
+
+#hero {
+    text-align: center;
+    margin: 50px 0;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project h3 {
+    margin: 15px 0;
+}
+
+.project a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.skills {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    text-align: center;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skill-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #4CAF50;
+    border: 5px solid #4CAF50;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 10%;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer form input, footer form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer form button {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer form button:hover {
+    background: #45a049;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+}
+/* Include your existing styles */
+.skill-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#4CAF50 calc(var(--percentage) * 1%), #ddd 0);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #fff;
+    border: 5px solid #4CAF50;
+    overflow: hidden;
+    text-align: center;
+    line-height: 1.2; /* Ensures multiline text fits */
+}
+
+.skill-circle::after {
+    content: attr(data-skill) '%';
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.8rem;
+    color: #333;
+}
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+#menu-toggle {
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #444;
+}
+
+nav ul li {
+    border-bottom: 1px solid #555;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+/* Expanded menu styles */
+nav.expanded {
+    max-height: 200px; /* Adjust this to fit your menu content */
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    nav {
+        max-height: none;
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+        background: none;
+    }
+
+    nav ul li {
+        border: none;
+    }
+
+    nav ul li a {
+        color: white;
+    }
+}
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+#menu-toggle {
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #444;
+}
+
+nav ul li {
+    border-bottom: 1px solid #555;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+/* Expanded menu styles */
+nav.expanded {
+    max-height: 200px;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    nav {
+        max-height: none;
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 10px;
+        background: none;
+    }
+
+    nav ul li {
+        border: none;
+    }
+
+    nav ul li a {
+        color: white;
+    }
+}
+
+section {
+    padding: 20px;
+}
+
+#coding-profiles {
+    background: #f4f4f9;
+    padding: 20px;
+    text-align: center;
+}
+
+#coding-profiles h2 {
+    margin-bottom: 20px;
+}
+
+#coding-profiles a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#coding-profiles a:hover {
+    background: #555;
+}
+/* Coding Profiles Section */
+#coding-profiles {
+    background: #f4f4f9;
+    padding: 20px;
+}
+
+#coding-profiles h2 {
+    margin-bottom: 20px;
+    text-align: left; /* Align the heading to the left */
+}
+
+#coding-profiles .profiles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#coding-profiles .profiles a img {
+    width: 80px; /* Adjust the size of logos */
+    height: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#coding-profiles .profiles a img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+/* Basic styles */
+#coding-profiles {
+    text-align: center;
+    padding: 20px;
+}
+
+#coding-profiles h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profiles {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Adjusted gap between icons */
+}
+
+.profiles a img {
+    width: 80px;  /* Default image size for mobile/tablets */
+    height: 80px;
+    transition: transform 0.3s;
+}
+
+/* Hover effect for images */
+.profiles a img:hover {
+    transform: scale(1.1);
+}
+
+/* For PCs (large screens) */
+@media (min-width: 1025px) {
+    .profiles a img {
+        width: 300px !important;  /* Image size for PCs, using !important to ensure it overrides other styles */
+        height: 300px !important;
+    }
+}
+
+/* Responsive design for tablets (max-width: 1024px) */
+@media (max-width: 1024px) { 
+    .profiles {
+        gap: 20px;  /* Adjusted gap for tablets */
+    }
+    .profiles a img {
+        width: 150px;  /* Larger image size on tablets */
+        height: 150px;
+    }
+}
+
+/* Responsive design for mobile devices (max-width: 768px) */
+@media (max-width: 768px) { 
+    .profiles {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .profiles a img {
+        width: 120px;  /* Image size for mobile */
+        height: 120px;
+    }
+}
+
+/* Very small screens (max-width: 480px) */
+@media (max-width: 480px) { 
+    #coding-profiles h2 {
+        font-size: 20px;  /* Adjust font size */
+    }
+    .profiles a img {
+        width: 100px;  /* Slightly smaller image size on very small screens */
+        height: 100px;
+    }
+}
+
+
+

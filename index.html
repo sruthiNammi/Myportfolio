@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/67e6c2a1f1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <nav id="menu">
+        
+              <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#coding-profiles">Coding Profiles</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Hi, I'm Naga Sruthi Nammi</h2>
+        I am a <span id="dynamic-text" class="highlight">Web Developer</span>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects">
+            <!-- Project cards as in the current code -->
+            <section id="projects">
+                
+                <div class="projects">
+                    <div class="project">
+                        <img src="https://papergames.io/en/assets/games/tictactoe/thumbnail.png" alt="Project 1">
+                        <h3>TIC-TAC-TOE GAME</h3>
+                        <a href="https://prodigy-wd-02-bay.vercel.app/">View Project</a>
+                    </div>
+                    <div class="project">
+                        <img src="https://recipecard.io/wp-content/uploads/2024/03/damn-delicious-1024x871.png" alt="Project 2">
+                        <h3>FOOD RECIPE APP</h3>
+                        <a href="https://food-recipe-app-seven-ashy.vercel.app/">View Project</a>
+                    </div>
+                    <div class="project">
+                        <img src="https://user-images.githubusercontent.com/42378118/99897986-fd02dc00-2cc3-11eb-9cac-f5b577bfef40.png" alt="Project 3">
+                        <h3>WEATHER APP</h3>
+                        <a href="prodigy-wd-03-tau-flame.vercel.app">View Project</a>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-circle" data-skill="85">C</div>
+            </div>
+            <div class="skill">
+                <div class="skill-circle" data-skill="85">C++</div>
+            </div>
+            <div class="skill">
+                <div class="skill-circle" data-skill="90">HTML</div>
+            </div>
+            <div class="skill">
+                <div class="skill-circle" data-skill="85">CSS</div>
+            </div>
+            <div class="skill">
+                <div class="skill-circle" data-skill="75">JavaScript</div>
+            </div>
+            <div class="skill">
+                <div class="skill-circle" data-skill="80">React.js</div>
+            </div>
+            <div class="skill">
+                <div class="skill-circle" data-skill="70">Python</div>
+            </div>
+            <div class="skill">
+                <div class="skill-circle" data-skill="65">DBMS</div>
+            </div>
+            <div class="skill">
+                <div class="skill-circle" data-skill="60">Operating Systems</div>
+            </div>
+            <div class="skill">
+                <div class="skill-circle" data-skill="75">Computer Networks</div>
+            </div>
+        </div>
+    </section>
+    <section id="coding-profiles">
+        <h2>Coding Profiles</h2>
+        <div class="profiles">
+            <a href="https://www.codechef.com/users/sruthi2348" target="_blank">
+                <img src="https://i.pinimg.com/originals/c5/d9/fc/c5d9fc1e18bcf039f464c2ab6cfb3eb6.jpg" alt="CodeChef">
+            </a>
+            <a href="https://leetcode.com/u/sruthi2348/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/LeetCode_Logo_1.png" alt="LeetCode">
+            </a>
+            <a href="https://www.hackerrank.com/profile/21L31A05G2" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/HackerRank_Icon-1000px.png/800px-HackerRank_Icon-1000px.png" alt="HackerRank">
+            </a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Contact Me</h2>
+        <form action="mailto:sruthi2348@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="https://github.com/sruthiNammi" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
