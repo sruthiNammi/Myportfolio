@@ -502,6 +502,32 @@ section {
         height: 100px;
     }
 }
+/* Scrollable menu for mobile */
+nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+nav.expanded {
+    max-height: 300px; /* Adjust height to fit the screen or as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Add scrollbar styling for better appearance (optional) */
+nav.expanded::-webkit-scrollbar {
+    width: 8px;
+}
+
+nav.expanded::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+nav.expanded::-webkit-scrollbar-thumb:hover {
+    background: #333;
+}
+
 
 
 
