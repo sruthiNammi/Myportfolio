@@ -1,5 +1,5 @@
 // Dynamic text rotation for the About section
-const roles = ["Web Developer", "Competitive Programmer"];
+const roles = ["Competitive Programmer", "Quality Analyst"];
 let index = 0;
 
 const dynamicText = document.getElementById("dynamic-text");
